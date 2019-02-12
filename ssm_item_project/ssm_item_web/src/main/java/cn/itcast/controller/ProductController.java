@@ -24,6 +24,17 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+
+    /*新增代码，测试git*/
+    @RequestMapping("/git_test")
+    public ModelAndView git_test(){
+        ModelAndView mv = new ModelAndView();
+        List<Items> products =  productService.findAll();
+
+        mv.addObject("itemsList",products);
+        mv.setViewName("itemsList");
+        return mv;
+    }
     @RequestMapping("/findAll")
     public ModelAndView findAll(){
         ModelAndView mv = new ModelAndView();

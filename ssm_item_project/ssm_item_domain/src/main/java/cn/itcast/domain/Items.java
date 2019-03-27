@@ -18,6 +18,7 @@ public class Items {
 @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createtime;
 
+    //git测试1
     private String detail;
 
     public Integer getId() {
